@@ -1,6 +1,4 @@
-package com.learning.learning;
-
-import java.util.ArrayList;
+package com.learning;
 
 /**
  * Hello world!
