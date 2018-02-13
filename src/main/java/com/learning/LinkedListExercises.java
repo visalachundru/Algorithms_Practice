@@ -18,10 +18,12 @@ public class LinkedListExercises {
 
 	public static void main(String[] args) {
 		//5--> 8--> 10--> 12 --> 6		
-		printOddNodesMiddle();
+		//printOddNodesMiddle();
 		
 		//5--> 8--> 10--> 12 --> 6 -->16
-		printEvenNodesMiddle();
+	//	printEvenNodesMiddle();
+		
+		printIfThereIsACyclic();
 
 	}
 
@@ -88,6 +90,36 @@ public class LinkedListExercises {
 		}
 
 		return pointer2;
+	}
+	
+	static void printIfThereIsACyclic() {
+		LinkedList<Node> list = new LinkedList<Node>();
+
+		Node head = new Node(5);
+		Node second = new Node(8);
+		Node third = new Node(10);
+		Node fourth = new Node(12);
+		Node fifth = new Node(6);
+		
+		head.next = second;
+		second.next = third;
+		third.next = fourth;
+		fourth.next = fifth;
+		fifth.next = second;
+		
+		
+		Node fast = head;
+		Node slow = head;
+	    while(fast != null && fast.next != null)
+		{
+			slow = slow.next;
+			fast = fast.next.next;
+			if(fast == slow)
+			{
+				System.out.println("there is a cyclic : " +  fast.value);
+			}
+		}
+		
 	}
 
 }
