@@ -18,10 +18,10 @@ public class LinkedListExercises {
 
 	public static void main(String[] args) {
 		//5--> 8--> 10--> 12 --> 6		
-		//printOddNodesMiddle();
+		printOddNodesMiddle();
 		
 		//5--> 8--> 10--> 12 --> 6 -->16
-	//	printEvenNodesMiddle();
+		printEvenNodesMiddle();
 		
 		printIfThereIsACyclic();
 
